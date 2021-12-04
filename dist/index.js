@@ -844,7 +844,7 @@ function run() {
                 core.warning('Cannot find the PR id.');
                 return;
             }
-            const failedThreshold = Number.parseInt(core.getInput('failedThreshold'), 10);
+            const failedThreshold = Number.parseFloat(core.getInput('failedThreshold'));
             core.debug(`failedThreshold ${failedThreshold}`);
             const resultPath = core.getInput('resultPath');
             core.debug(`resultPath ${resultPath}`);
